@@ -21,3 +21,5 @@ Then, click the magnifying glass again to load the components.
 
 Repeat these step for other components that show up as no local cache. If you face "Blocked by project" error, please follow instructions from [this website](https://newbedev.com/microsoft-aspnetcore-app-2-1-1-upgrade-blocked-by-project).
 
+#### Result:
+The component list in the Visual Studio Plugin is populated.
