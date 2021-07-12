@@ -9,7 +9,7 @@
 3. It shows error message `No local cache found for <component-name.version>`
 
 #### Cause:
-Visual Studio has bundled the .NET Core components, without going through Nuget. So there is no Nuget cache for the plugin to analyze. 
+Visual Studio has bundled the .NET Core components, without going through Nuget. So there is no Nuget cache for the plugin to analyze. This only affects .NET Core project.
 
 #### Solution:
 In Visual Studio `Package Manager Console`, manually install the package with this command: `Install-Package <component-name> -Version <version>`. For example:
@@ -17,5 +17,7 @@ In Visual Studio `Package Manager Console`, manually install the package with th
 ```
 Install-Package Microsoft.AspNetCore.App -version 2.1.1
 ```
+Then, click the magnifying glass again to load the components. 
 
 Repeat these step for other components that show up as no local cache. If you face "Blocked by project" error, please follow instructions from [this website](https://newbedev.com/microsoft-aspnetcore-app-2-1-1-upgrade-blocked-by-project).
+
