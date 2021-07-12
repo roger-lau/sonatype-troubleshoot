@@ -9,7 +9,7 @@
 3. It shows error message `No local cache found for <component-name.version>`
 
 #### Cause:
-Visual Studio has bundled the .NET Core components, without going through Nuget. So there is no Nuget cache for the plugin to analyze. This only affects .NET Core project.
+Visual Studio has bundled the .NET Core components, without going through Nuget. So there is no Nuget cache for the plugin to analyze. This only affects a .NET Core project.
 
 #### Solution:
 In Visual Studio `Package Manager Console`, manually install the package with this command: `Install-Package <component-name> -Version <version>`. For example:
