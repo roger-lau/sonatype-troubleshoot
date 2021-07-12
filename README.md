@@ -1,17 +1,17 @@
 # Visual Studio Plugin for .NET Core Project
 
-## No local cache found for Microsoft.AspNetCore.App.2.1.1
+### No local cache found for Microsoft.AspNetCore.App.2.1.1
 
-### Observations:
+#### Observations:
 1. Nexus IQ Component panel is showing an empty list, even after clicking the magnifiying glass.
 2. Connections to Nexus IQ Server is fine.
 3. No 403 error caused by Nexus Firewall.
 3. It shows error message `No local cache found for <component-name.version>`
 
-### Cause:
+#### Cause:
 Visual Studio has bundled the .NET Core components, without going through Nuget. So there is no Nuget cache for the plugin to analyze. 
 
-### Solution:
+#### Solution:
 In Visual Studio `Package Manager Console`, manually install the package with this command: `Install-Package <component-name> -Version <version>`. For example:
 
 ```
